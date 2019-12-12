@@ -1,5 +1,5 @@
 import random
-with open("color.txt","w+") as f:
+with open("text/color.txt","w+") as f:
     a=ord('a')
     z=ord('z')+1
     color=['Violet','Indigo','Blue','Green','Yellow','Orange','Red']
