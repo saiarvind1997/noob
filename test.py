@@ -1,3 +1,103 @@
+import requests
+### try making a inhereted class called sex class sex:
+class Human:
+    def __init__(self,name,cal):
+        self.name=name
+        self.cal=cal
+class gender(Human):
+    def __init__(self,):
+
+
+
+
+"""
+url="https://randomuser.me/api/"
+#n=raw_input("\nDefine human names with commas\n").split(",")
+#g=raw_input("\nDefine human genders of the following names with commas\n").split(",")
+i=0
+m=[]
+f=[]
+#h=Human("sai","female")
+#h1=Human("ivy","female")
+#print h.sex(h.gender,h1.gender)
+population=True
+while population:
+    n=raw_input("\nDefine human name and gender with commans and enter 'end,spawn' to end spawing of humans\n").split(",")
+    try:
+        if n[1]=="Male" or n[1]=="male":
+            m.append(n[0])
+        elif n[1]=="Female" or n[1]=="female" :
+            f.append(n[0])
+        elif n[0]=="end" and  n[1]=="spawn":
+            population=False
+    except:
+        print "gender not defined"
+    print m
+    print f
+male={name:Human(name=name,gender="Male") for name in m}
+female={name:Human(name=name,gender="Female") for name in f}
+print male
+print female
+
+identity,identity2,action=raw_input("\nEnter a male,female and desired state from sleep|eat|move|sex|end\n").split()
+while action!="end":
+    for i in male:
+        for j in female:
+            if (identity==i and identity2==j) or (identity2==i and identity==j):# try more
+                print i
+                print j
+                print Human.sex(i,j)
+    identity,identity2,action=raw_input("\nEnter a male,female and desired state from sleep|eat|move|sex|end\n").split()
+#in the next episode i will have to first add a object reference in the loop for sex method to work. i.e: h.method() in 6 will be male.sex() in 7 
+#look at inheretence to see if you can make a seperate gender sub class(might not work) 
+"""
+
+
+"""
+#### Try 1
+population=True
+while population:
+    n=raw_input("\nDefine human name and gender with commans and enter 'end,spawn' to end spawing of humans\n").split(",")
+    print n[0]
+    try:
+        if n[1]=="Male" or n[1]=="male":
+            m.append(n[0])
+        elif n[1]=="Female" or n[1]=="female" :
+            f.append(n[0])
+        elif n[0]=="end" and  n[1]=="spawn":
+            population=False
+    except:
+        print "gender not defined"
+    print m
+    print f
+male={name:Human(name=name) for name in m}
+female={name:Human(name=name) for name in f}
+print male
+print female
+for i in male:
+    print i
+for j in female:
+    print j
+"""
+
+"""
+for i in n:
+    print i
+    response=requests.get(url)
+    js=response.json()
+    n=js["results"][0]["name"].values()
+    spawn_name=n[0].lower()
+    spawn_gender=js["results"][0]["gender"]
+    spawn_name=spawn_name.encode("ascii","ignore")
+    s_h={spawn_name:Human(name=spawn_name,gender=spawn_gender)}
+    h.update(s_h)
+    print("\n")
+    print h
+    print("\n")
+"""
+
+
+
 """
 ### Task_6 iterations
 
@@ -81,6 +181,4 @@ while action != "end":
     identity,action=raw_input("\nEnter your next move\n").split()
 else:
     print("Destroy all humans")
-
 """
-
