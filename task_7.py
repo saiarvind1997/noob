@@ -19,7 +19,7 @@ print h
 for i in range(0,10):
     response=requests.get(url)
     js=response.json()
-    n=js["results"][0]["name"].values()
+    n=js["results"][0]["name"].values() #to find and search for the values. 1st results and then name. think of it as nested
     spawn_name=n[0].lower()
     spawn_name=spawn_name.encode("ascii","ignore")
     s_h={spawn_name:Human(name=spawn_name)}
